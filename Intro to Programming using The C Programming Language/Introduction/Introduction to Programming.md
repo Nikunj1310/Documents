@@ -19,7 +19,7 @@ So we write a set of instructions and then it works on them using the instructio
 
 When we do programming,basically we want to talk to the computer in order to make it do something. And in order to communicate, we have to speak in a certain language.
 
-Computers cannot understand the language we speak. They were built to understand the [[Machine Code]] written in `binary language(A language which has only two things, 1 and 0, and that's it!!!)`. This creates a problem. Machine code is not something that we can work with, it is hard to understand and work with.
+Computers cannot understand the language we speak. They were built to understand the [[Machine Code]] written in `binary language (A language which has only two things, 1 and 0, and that's it!!!)`. This creates a problem. Machine code is not something that we can work with, it is hard to understand and work with.
 This is why we had to create our own language that we would use in order to work with computers, and to convert that into machine code, we created something called [[Implementation]].
 This language that we use to communicate with computers is called a `programming language`.
 
@@ -114,7 +114,7 @@ The basic elements of programming are the fundamental building blocks you use to
     - **Booleans
     
 2. **[[Variables and their scope]]**: 
-	These are named storage locations in the computer's memory that hold data. Think of them as containers that can hold different values. You give each variable a name (an identifier), and you can store and retrieve data from it. Crucially, the value stored in a variable can change during the execution of a program (hence the name "variable").	
+	These are named storage locations in the computer's memory that hold data. Think of them as containers that can hold different values. You give each variable a name (an identifier), and you can store and retrieve data from it. Crucially, the value stored in a variable can change during the execution of a program (hence the name "variable").
 	
 	(Now we will discuss the user-defined data types called ["Structs"](Structs.md))
 	

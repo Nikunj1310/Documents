@@ -2,6 +2,8 @@
 Structure the notes by compiling the algorithms, i.e, mention all the ways in which algorithms are done, create note for each way, link the algorithms it has, and below that in this file, mention all the algorithms grouped by their purpose
 ```
 
+Also look into [[Number System]]
+
 ### 1. What is an Algorithm?
 
 Informally, an **algorithm** is any well-defined computational procedure that takes some value (input) and produces some value (output) in a finite amount of time. It is a tool for solving a well-specified computational problem, providing a precise sequence of steps to achieve a desired result.
@@ -64,6 +66,9 @@ Before we get into the details of Data Structures that we have in DSA, it would 
 4) [[Graphs Representation]]
 
 After this, we need to cover some Data Structures, and then we'll look into the algorithms relating [Graphs like path finding](#Graphs%20related%20Algorithm).
+
+## Vectors
+[[Vector in STL]]
 
 ## Linked Lists
 

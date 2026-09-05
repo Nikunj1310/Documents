@@ -2,6 +2,132 @@
 > It walks through core concepts, your actual code, and answers every common question.
 > Read it top to bottom the first time, then use it as a reference.
 
+
+
+![[Recording 20260809195931.m4a]]
+
+![[Recording 20260809201306.m4a]]
+Alright, focusing specifically on the asset itself (the `.inputactions` file) — here are the distinct ways to consume it:
+
+### 1. `PlayerInput` component (asset dragged into Inspector)
+
+Attach `PlayerInput`, drag your `.inputactions` asset into its **Actions** field. This is the "no manual enable/disable" path — the component handles enabling the active action map and routing callbacks for you. Pick a **Behavior**:
+
+|Behavior|Usage|
+|---|---|
+|Send Messages|Unity calls `On<ActionName>(InputValue value)` on the same GameObject, by naming convention|
+|Broadcast Messages|Same, but also calls on children|
+|Invoke Unity Events|Wire a method in the Inspector via `UnityEvent`, zero code|
+|Invoke C# Events|Subscribe in code: `playerInput.onActionTriggered += ctx => {...}`|
+
+csharp
+
+```csharp
+public void OnMove(InputValue value) // Send Messages behavior
+{
+    Vector2 move = value.Get<Vector2>();
+}
+```
+
+Easiest to set up, but least flexible for things like manually toggling action maps.
+
+### 2. Generated C# class (the recommended workflow)
+
+In the asset's Inspector, tick **Generate C# Class**. Unity creates a strongly-typed wrapper class (usually matching your asset's name, e.g. `PlayerControls`) with a property per action map and per action — no string lookups, no typos, full autocomplete.
+
+csharp
+
+```csharp
+public class PlayerMovement : MonoBehaviour
+{
+    private PlayerControls controls;
+
+    void Awake()  { controls = new PlayerControls(); }
+    void OnEnable()  { controls.Gameplay.Enable(); }
+    void OnDisable() { controls.Gameplay.Disable(); }
+
+    void OnEnable2()
+    {
+        controls.Gameplay.Jump.performed += OnJump; // event style
+    }
+
+    void Update()
+    {
+        Vector2 move = controls.Gameplay.Move.ReadValue<Vector2>(); // polling style
+    }
+
+    void OnJump(InputAction.CallbackContext ctx) { }
+}
+```
+
+This is what most real projects use — you get both polling (`ReadValue`) and event subscription (`.performed +=`, `.started +=`, `.canceled +=`) on the same generated action, and you control exactly when action maps are enabled (e.g. swap `Gameplay` for `UI` on pause).
+
+### 3. Raw `InputActionAsset` reference — no codegen
+
+Drag the asset into a public field, then look up maps/actions by string name at runtime. No generated class needed, but you lose compile-time safety.
+
+csharp
+
+```csharp
+public InputActionAsset inputActions;
+private InputAction moveAction;
+
+void Awake()
+{
+    var map = inputActions.FindActionMap("Gameplay");
+    moveAction = map.FindAction("Move");
+}
+
+void OnEnable()  { moveAction.Enable(); }
+void OnDisable() { moveAction.Disable(); }
+
+void Update() { Vector2 move = moveAction.ReadValue<Vector2>(); }
+```
+
+### 4. `InputActionReference` — reference a single action directly
+
+Instead of referencing the whole asset, expose a field of type `InputActionReference` and drag **one specific action** from the asset onto it in the Inspector. Good for reusable components that only care about one action (e.g. a generic "Interact" button component you drop on many prefabs).
+
+csharp
+
+```csharp
+public InputActionReference jumpActionRef;
+
+void OnEnable()  { jumpActionRef.action.Enable(); jumpActionRef.action.performed += OnJump; }
+void OnDisable() { jumpActionRef.action.Disable(); jumpActionRef.action.performed -= OnJump; }
+
+void OnJump(InputAction.CallbackContext ctx) { }
+```
+
+### 5. `InputActionMap.actionTriggered` — one subscription for a whole map
+
+Instead of subscribing per-action, subscribe once at the **map** level and branch on `ctx.action.name` inside. Useful when you want a single funnel/log point for everything in a map.
+
+csharp
+
+```csharp
+void OnEnable()
+{
+    controls.Gameplay.Enable();
+    controls.Gameplay.Get().actionTriggered += OnAnyAction;
+}
+void OnAnyAction(InputAction.CallbackContext ctx)
+{
+    if (ctx.action.name == "Move") { /* ... */ }
+}
+```
+
+### Quick decision table
+
+| Approach                      | Type safety               | Setup effort          | Best for                         |
+| ----------------------------- | ------------------------- | --------------------- | -------------------------------- |
+| `PlayerInput` (Send Messages) | Low (string method names) | Lowest                | Quick prototypes                 |
+| `PlayerInput` (C# Events)     | Medium                    | Low                   | Prototypes needing code control  |
+| Generated C# class            | Highest                   | Medium (one checkbox) | Most real projects               |
+| Raw `InputActionAsset`        | Low (string lookups)      | Medium                | Dynamic/data-driven input setups |
+| `InputActionReference`        | Medium                    | Low per-field         | Reusable, decoupled components   |
+| `actionTriggered` on a map    | Low                       | Low                   | Central logging/debug funnels    |
+
 ---
 
 ## Table of Contents

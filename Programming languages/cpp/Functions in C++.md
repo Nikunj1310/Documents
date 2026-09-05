@@ -84,7 +84,7 @@ double sum(double a, double b)
 The compiler chooses the correct function based on the arguments used.
 
 ---
-## 5. Default Arguments (C++-only Feature)
+## 5. Default Arguments (C++ only Feature)
 You can specify default values for parameters:
 ```cpp
 void display(int a, int b = 10) 

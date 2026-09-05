@@ -143,3 +143,160 @@ Where the PlayerInputAction is the name of the input action map which we got a C
 
 - CreateAssetMenu
 - Sprite in 2D and 3D
+
+Transform cam = Camera.main.transform;
+            Vector3 forward = Vector3.ProjectOnPlane(cam.forward, Vector3.up).normalized;
+            Vector3 right = Vector3.ProjectOnPlane(cam.right, Vector3.up).normalized; here, explain what are we doing with camera? Why not use the transform of the player gameobject itself?
+And what if I wanted to use cinemachine for camera movements?
+I am GLM-5.2.
+
+The old camera math existed to solve a problem that no longer exists: back then, nothing rotated the player body, so transform.forward was frozen at world +Z forever — W would push you toward world north no matter where you looked. The camera was the only thing that knew where "forward" meant, hence Camera.main + ProjectOnPlane.
+
+PlayerLook changed that: it rotates the body's yaw to match the camera every frame. So now:
+
+- transform.forward IS the flattened camera forward (same direction, already ground-flat — body only yaws, never pitches).
+- transform.right is the flattened camera right, likewise.
+
+Same result, fewer moving parts: no per-frame Camera.main tag lookup, no projection math, no null risk if the camera object is renamed or a Cinemachine brain takes over. Deleted code that only existed to compensate for a missing feature.
+
+The equivalence:
+
+
+transform.forward (after PlayerLook yaw) == Vector3.ProjectOnPlane(camera.forward, up).normalized
+
+
+If PlayerLook is ever removed or disabled, movement breaks in the "always walks north" way — that's the one coupling to remember. Skipped: keeping both paths behind a flag, add when you need a camera-independent movement mode (e.g. spectate/drone).
+╰───────────────────────────────────────────────────────────
+● so when i asked to use the player transform.forward, why did you say that that will also have issues as player might be looking towards sky and then we might face issues?
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+No contradiction — the warning and the fix apply to two different architectures, and the difference is who carries the pitch.
+
+The rule is: flattening is needed on whatever transform you derive movement from IF that transform pitches (rotates on X). Pitch tilts forward off the ground plane; yaw never does.
+
+Setup 1 (where I warned you): the camera was a child of the player on a pivot, and the pivot carried pitch. So cam.forward pointed at the sky when you looked up. Any movement derived from it — including the player's forward if the player was the pitched object — would drift upward. Hence ProjectOnPlane.
+
+Setup 2 (PlayerLook, current): pitch moved OUT of the player entirely. The body only ever does transform.Rotate(0f, yaw, 0f) — yaw only, always flat. The up/down look lives inside Cinemachine's FreeLook orbit (m_YAxis), which is camera state, not a rotation on the body. So transform.forward is permanently ground-flat and needs no projection.
+
+The warning was never "player transform bad, camera good." It was "pitch-carrying transform needs flattening." The camera carried pitch then; nothing carries it now.
+
+The one case where the old warning reapplies in setup 2: if you ever rotate the body on X (e.g., a first-person camera parented to the body and pitching the body itself), transform.forward tilts skyward again and the ProjectOnPlane comes back — or you keep the split: body yaws, a child pivot pitches. The split is the standard answer; that's what both setups converge on.
+
+Skipped: a pitch-on-body variant, add when you do first-person with the camera attached to the body instead of FreeLook.
+
+Here:
+using UnityEngine;                                                                                                                                                             │
+│                                                                                                                                                                                            │
+│             namespace HunterInput                                                                                                                                                          │
+│             {                                                                                                                                                                              │
+│                 [RequireComponent(typeof(CharacterController))]                                                                                                                            │
+│                 public class PlayerController : MonoBehaviour                                                                                                                              │
+│                 {                                                                                                                                                                          │
+│                     [Header("Movement")]                                                                                                                                                   │
+│                     [SerializeField] private float walkSpeed = 4.5f;                                                                                                                       │
+│                     [SerializeField] private float gravity = -25f;                                                                                                                         │
+│                     [SerializeField] private float jumpHeight = 2f;                                                                                                                        │
+│                                                                                                                                                                                            │
+│                     private CharacterController controller;                                                                                                                                │
+│                     private float verticalVelocity;                                                                                                                                        │
+│                                                                                                                                                                                            │
+│                     private void Awake() => controller = GetComponent<CharacterController>();                                                                                              │
+│                     private void OnEnable() => InputProvider.Actions.Player.Enable();                                                                                                      │
+│                     private void OnDisable() => InputProvider.Actions.Player.Disable();                                                                                                    │
+│                                                                                                                                                                                            │
+│                     private void Update()                                                                                                                                                  │
+│                     {                                                                                                                                                                      │
+│                         Vector2 moveInput = InputProvider.Actions.Player.Move.ReadValue<Vector2>();                                                                                        │
+│                                                                                                                                                                                            │
+│                         // PlayerLook rotates the body to face the camera, so the body's own                                                                                               │
+│                         // forward IS movement forward. No Camera.main, no ProjectOnPlane needed.                                                                                          │
+│                         Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x;                                                                           │
+│                                                                                                                                                                                            │
+│                         Vector3 velocity = moveDirection * walkSpeed;                                                                                                                      │
+│                         if (controller.isGrounded)                                                                                                                                         │
+│                         {                                                                                                                                                                  │
+│                             verticalVelocity = -2f;                                                                                                                                        │
+│                             if (InputProvider.Actions.Player.Jump.WasPressedThisFrame())                                                                                                   │
+│                                 verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);                                                                                                 │
+│                         }                                                                                                                                                                  │
+│                         else                                                                                                                                                               │
+│                         {                                                                                                                                                                  │
+│                             verticalVelocity += gravity * Time.deltaTime;                                                                                                                  │
+│                         }                                                                                                                                                                  │
+│                         velocity.y = verticalVelocity;                                                                                                                                     │
+│                         controller.Move(velocity * Time.deltaTime);                                                                                                                        │
+│                     }                                                                                                                                                                      │
+│                 }                                                                                                                                                                          │
+│             }     	
+
+Vector3 moveDirection = transform.forward * moveInput.y + transform.right * moveInput.x; Here, we could also do transform.left * moveInput.x?
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+Yes, but only by flipping the sign — and that's exactly why the current version is the right one.
+
+Unity's transform.left is defined as -transform.right. So:
+
+
+right * moveInput.x   with D (x = +1)  -> moves right   <- current, correct
+left  * moveInput.x   with D (x = +1)  -> moves left    <- inverted controls
+left  * -moveInput.x  with D           -> moves right   <- correct, but why?
+
+
+The third form is algebraically identical to right * moveInput.x — you'd add a negation just to cancel out another negation. There's no case where it reads better.
+
+The mapping that feels natural: D = positive x = strafe right = transform.right. That's one multiplication, no sign gymnastics, and it matches every other game's convention so you (and anyone reading the code at 3am) don't have to think about it.
+
+Use transform.left only if the input itself were inverted for some reason (e.g. a flipped stick axis from a rebind) — and even then, fixing the input value is cleaner than encoding the flip in the movement formula.
+
+Skipped: nothing. This is a sign-convention question, not a code change — keep transform.right * moveInput.x as is.
+
+
+- Cursor.lockState = CursorLockMode.Locked;
+Aka study the Coursor, if its a compoennt, or a Global API ?
+
+learn about cinemachine freelook
+lean about keyboard class : Keyboard.current.escapeKey.wasPressedThisFrame
+Also learn about the basci methods in unity transform, the prameters anda ll
+
+learn:
+
+● // mouse up -> camera lower -> look up. Flip the sign if it feels inverted.                                                                                    │
+│                             freeLook.m_YAxis.Value = Mathf.Clamp01(                                                                                                                        │
+... (+1 more line)
+│                         }                                                                                                                                                                  │
+│                     }                                explain
+────────────────────────────────────────
+
+
+╭─ ⚕ Hermes ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+Line by line:
+
+csharp
+freeLook.m_YAxis.Value = Mathf.Clamp01(
+    freeLook.m_YAxis.Value - look.y * pitchSpeed * Time.deltaTime);
+
+
+What m_YAxis is: a normalized 0..1 value that picks where the FreeLook orbits. 0 = bottom orbital ring (camera low, looking UP at the player), 1 = top ring (camera high, looking DOWN). Cinemachine blends between its three orbital rings (Bottom/Middle/Top) from this single number. It is NOT degrees — that's why Clamp01, not a -80..80 clamp.
+
+The math:
+
+- look.y is the mouse delta. Mouse pushed UP = positive y.
+- look.y * pitchSpeed * deltaTime = how much the orbit moves this frame (sensitivity × delta-scaled).
+- Mouse up → positive → we SUBTRACT → m_YAxis drops toward 0 → camera sinks toward the bottom ring → camera lower → it tilts up to keep looking at the player → you look up.
+
+That's the whole trick: m_YAxis's direction is inverted relative to view pitch. Lower value = look up. So the standard "mouse up = look up" feel requires subtraction. The comment ("mouse up -> camera lower -> look up") documents the inversion so nobody "fixes" the sign and breaks the feel.
+
+Mathf.Clamp01 — hard cap at 0..1 so the orbit can't be driven past the bottom/top rings into undefined territory.
+
+pitchSpeed — sensitivity expressed in normalized-orbit-units per second per mouse-delta unit (0.5 = reasonable starting value). Same role as yawSpeed but in m_YAxis's units instead of degrees.
+
+Why drive it by hand instead of CinemachineInputProvider: we already own the input via InputProvider, and the yaw half of this same mouse delta has to reach the body anyway. One script, one read, both consumers. No extra component, no InputActionReference asset.
+
+Pitfall if the camera feels like it recenters on its own while you look around: that's FreeLook's YAxisRecentering (default on). Disable it in the vcam's Orbits/Recentering section for a shooter feel.
+
+Skipped: YAxisRecentering config (leave default until it annoys you), and CinemachineInputProvider (extra ceremony, same result).
+

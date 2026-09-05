@@ -78,9 +78,7 @@ _(Note: Under the hood, `ptr->age` is just a cleaner shortcut for `(*ptr).age`)_
 
 **Example: Pointers pointing to existing structs**
 
-C++
-
-```
+```C++
 #include <iostream>
 #include <string>
 
@@ -285,4 +283,4 @@ int main() {
 
 ---
 
-Would you like to see how to add regular functions (methods) inside your structs, or would you prefer to learn about **Destructors** (the function that runs when a struct is destroyed)?
+For other STL data structures, check out : [[STL in C++]]

@@ -4,109 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "692b442c77f76883",
+        "id": "18af9b7907240914",
         "type": "tabs",
         "children": [
           {
-            "id": "55f612ded5767f83",
+            "id": "73173454e718df67",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Books/Game Engine Architecture.md",
+                "file": "Programming languages/cpp/Vector in STL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Game Engine Architecture"
+              "title": "Vector in STL"
             }
           },
           {
-            "id": "afbb23e0f3b053c3",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Books/Game Engine Architecture.pdf",
-                "page": 1,
-                "zoom": 1
-              },
-              "icon": "lucide-file-text",
-              "title": "Game Engine Architecture"
-            }
-          },
-          {
-            "id": "25b0a569794e54cc",
+            "id": "6e9279dbf24c0dac",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Backend/Internet/HTTP/HTTP Flow.md",
+                "file": "Programming languages/cpp/Linked Lists in STL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTTP Flow"
+              "title": "Linked Lists in STL"
             }
           },
           {
-            "id": "a98e735d0509089d",
+            "id": "6d59789785efe94d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intro to Programming using The C Programming Language/Basic elements of writing code/Operators.md",
+                "file": "Programming languages/cpp/C++ Programming Language.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Operators"
+              "title": "C++ Programming Language"
             }
           },
           {
-            "id": "6ed80df2e4afd728",
+            "id": "d306415e7e5d6d22",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Randomized QuickSort.md",
+                "file": "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Algorithms Revision Sheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Randomized QuickSort"
+              "title": "Algorithms Revision Sheet"
             }
           },
           {
-            "id": "c9685ee2638e0e88",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/Java/Java GUI Classes and Their Basic Functions (JFrame).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Java GUI Classes and Their Basic Functions (JFrame)"
-            }
-          },
-          {
-            "id": "1af9c0ccc323417e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Unity GameDev/Unity/Canvas/The New Input System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "The New Input System"
-            }
-          },
-          {
-            "id": "a2763e467879b871",
+            "id": "d53b850f52c9d92a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -120,157 +78,35 @@
             }
           },
           {
-            "id": "c4bc7ea56705c586",
+            "id": "0baf23b546761f33",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Object Oriented Programming/Object Oriented Programming.md",
+                "file": "Intro to Programming using The C Programming Language/Introduction/Introduction to Programming.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Object Oriented Programming"
+              "title": "Introduction to Programming"
             }
           },
           {
-            "id": "a98906636ecb2e81",
+            "id": "f9f4077167864fe7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming languages/C#/Methods in c-sharp.md",
+                "file": "ReactNative/Introduction to ReactNative.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Methods in c-sharp"
-            }
-          },
-          {
-            "id": "4895bcb64c7be9cd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/C#/C-sharp Programming Language.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "C-sharp Programming Language"
-            }
-          },
-          {
-            "id": "ecbbc8315edf6b4f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/C#/Methods in c-sharp.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Methods in c-sharp"
-            }
-          },
-          {
-            "id": "4700c17bb799f09d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/JavaScript/Introduction to Express.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction to Express"
-            }
-          },
-          {
-            "id": "6df726506096302c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/JavaScript/Introduction to JavaScript.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction to JavaScript"
-            }
-          },
-          {
-            "id": "328caf8801488460",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend/Introduction to Docker.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Introduction to Docker"
-            }
-          },
-          {
-            "id": "123abd8e21f6c7e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Backend/Some practice for BCrypt.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Some practice for BCrypt"
-            }
-          },
-          {
-            "id": "be9ad2d9bd1c7479",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/JavaScript/URLs and Parameters in Express.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "URLs and Parameters in Express"
-            }
-          },
-          {
-            "id": "267b495239241050",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "after 2 years, where do I wanna see myself?.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "after 2 years, where do I wanna see myself?"
-            }
-          },
-          {
-            "id": "381b2ad4e8de5b73",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Introduction to ReactNative"
             }
           }
         ],
-        "currentTab": 18
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -290,7 +126,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -318,7 +156,10 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {},
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
@@ -343,8 +184,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Node_js/Express Framework JS.md",
-                "collapseAll": false,
+                "file": "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Algorithms Revision Sheet.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -353,7 +194,22 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Express Framework JS"
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "b07c5833c41e5c95",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "ReactNative/Introduction to ReactNative.md",
+                "followCursor": false,
+                "showSearch": true,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           },
           {
@@ -377,8 +233,8 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
+                "useHierarchy": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
@@ -386,38 +242,14 @@
             }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "9a8789f88f4c967c",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "b07c5833c41e5c95",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "followCursor": false,
-                "showSearch": true,
-                "searchQuery": "Node"
-              },
-              "icon": "lucide-list",
-              "title": "Outline"
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 236.5
+    "width": 337.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "pdf-plus:PDF++: Toggle auto-copy": false,
-      "pdf-plus:PDF++: Toggle auto-focus": false,
-      "pdf-plus:PDF++: Toggle auto-paste": false,
-      "screengarden-obsidian:screen.garden": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -426,56 +258,62 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "audio-recorder:Start/stop recording": false,
-      "vscode-editor:Create Code File": false
+      "vscode-editor:Create Code File": false,
+      "screengarden-obsidian:screen.garden": false,
+      "pdf-plus:PDF++: Toggle auto-copy": false,
+      "pdf-plus:PDF++: Toggle auto-focus": false,
+      "pdf-plus:PDF++: Toggle auto-paste": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "381b2ad4e8de5b73",
+  "active": "f9f4077167864fe7",
   "lastOpenFiles": [
-    "after 2 years, where do I wanna see myself?.md",
-    "BGSC Application/PGSCFeatruesAndDevPlan.pdf",
-    "BGSC Application/Unconfirmed 58491.crdownload",
-    "BGSC Application/Unconfirmed 34448.crdownload",
-    "Studio Game 3 Game Design (Hunter Game).md",
-    "Studio Game 2 Game Design (The Team Switch).md",
+    "Intro to Programming using The C Programming Language/Introduction/Introduction to Programming.md",
+    "Unity GameDev/Unity/Canvas/Unity Scripting(The Starting Point).md",
+    "GameDev/GUIDE-FULL.md",
+    "GameDev/TIMELINE.md",
+    "GameDev/Notes/00 - Index.md",
+    "GameDev/Notes/Unity/Camera.md",
+    "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Algorithms Revision Sheet.md",
+    "GameDev/Notes/Unity/GameObject.md",
     "GameDev/Studio Game 1 Game Design (Pong Kong).md",
-    "BGSC Application Design.md",
-    "Backend/Introduction to Docker.md",
-    "Backend/Caching and Redis.md",
-    "Backend/BullMQ, Background Jobs & Message Queues.md",
-    "Backend/BCrypt.md",
-    "Backend/Some practice for BCrypt.md",
-    "Backend/JWT Auth.md",
-    "Backend/Database and Structures/MySQL/Introduction to Database Migrations.md",
-    "Backend/Some Practice for JWT Auth.md",
-    "Backend/Authorization & RBAC.md",
-    "Backend/REGEX.md",
+    "GameDev/UNITY-PHOTON-FUNDAMENTALS.md",
+    "GameDev/GUIDE.md",
+    "Intro to Programming using The C Programming Language/The C Programming Language/The C Implementation.md",
+    "Intro to Programming using The C Programming Language/Introduction/Implementation.md",
+    "Programming languages/cpp/Linked Lists in STL.md",
+    "Programming languages/cpp/Vector in STL.md",
+    "Programming languages/cpp/C++ Programming Language.md",
+    "Attachments/Pasted image 20260820023217.png",
+    "Programming languages/cpp/Data Structures in C++.md",
+    "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Introduction to Data Structures And Algorithm.md",
+    "Programming languages/cpp/STL in C++.md",
+    "Programming languages/JavaScript/Syntax of JS.md",
+    "Programming languages/Java/Data types in Java.md",
+    "Unity GameDev/Unity/Canvas/Properties in Unity Hierarchy Inheritance.md",
+    "Programming languages/C#/C-sharp Programming Language.md",
+    "Unity GameDev/Unity/Canvas/The New Input System.md",
+    "Programming languages/JavaScript/Introduction to Express.md",
     "Programming languages/JavaScript/Introduction to JavaScript.md",
-    "Backend/Database and Structures/MySQL/Introduction to PostgreSQL.md",
-    "Programming languages/JavaScript/URLs and Parameters in Express.md",
-    "Backend/Backend Development - Learning Resources.pdf",
-    "Backend/Database and Structures/MySQL/Prisma ORM.md",
-    "Backend/Database and Structures/MySQL/Prisma Client (Auto-generated & Type-safe).md",
-    "Backend/Database and Structures/MySQL/The Prisma Schema (schema.prisma).md",
-    "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Randomized QuickSort.md",
-    "Backend/Internet/HTTP/HTTP Flow.md",
+    "Attachments/Recording 20260809201306.m4a",
+    "Attachments/Recording 20260809201153.m4a",
+    "Attachments/Recording 20260809195931.m4a",
+    "Attachments/Recording 20260809195626.m4a",
+    "Attachments/Recording 20260809195609.m4a",
+    "Composition ",
+    "Attachments/Pasted image 20260808000452.png",
+    "Attachments/Pasted image 20260808000244.png",
     "Books/Game Engine Architecture.pdf",
-    "Backend/Database and Structures/MySQL/Introduction to ORMs.md",
-    "Backend/Database and Structures/MySQL/Prisma Migrate.md",
-    "Backend/prisma_orm_guide.html",
-    "Backend/Unconfirmed 912497.crdownload",
+    "BGSC Application/Unconfirmed 189798.crdownload",
+    "CI",
+    "BGSC Application/The Ultimate Guide to UI Architectures; MVC, MVP, MVVM.pdf",
     "Attachments/db_migration_lifecycle.svg",
     "Attachments/Pasted image 20260527044323.png",
     "Attachments/Pasted image 20260526162134.png",
     "Attachments/Pasted image 20260526161214.png",
     "Attachments/Pasted image 20260526161200.png",
-    "Programming languages/Java/Resources/SimpleGUIApp.java",
     "Attachments/Pasted image 20260526152620.png",
-    "GameD_TODO_UNITY.txt",
-    "Backend/Database and Structures/MySQL/DESC ",
     "Attachments/Pasted image 20260518214301.png",
-    "Attachments/http-message-anatomy.svg",
-    "Attachments/Pasted image 20260327224752.png",
-    "Attachments/http-response.svg",
     "Projects/Wrath of god game/Class Structures.canvas",
     "Unity GameDev/Project Documentations/Card_Game.canvas",
     "Programming languages/Css/CSS Properties/display Property/Display.canvas",

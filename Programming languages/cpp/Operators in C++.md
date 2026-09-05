@@ -17,7 +17,7 @@ int* arr = new int[10]; // Allocates array of 10 ints
 delete[] arr;           // Frees the array
 ```
 - **Details:**
-    - `new` calls constructors and allocates memory on the heap.
+    - `new` calls constructors and allocates memory on the heap, and returns the pointer to that memory.
     - `delete` calls destructors and frees memory.
     - These replace `malloc` and `free` from C with type safety and constructor/destructor support.
 

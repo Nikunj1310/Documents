@@ -7,7 +7,7 @@ We use mathematical symbols to describe the "order of growth" of an algorithm's 
 
 #### **Big-O Notation ($O$): The Upper Bound**
 
-Think of $O(g(n))$ as a "worst-case" guarantee. If an algorithm is $O(n^2)$, it means the running time will grow **no faster** than a quadratic function. It provides an asymptotic upper bound.
+Think of $O(g(n))$ as a "worst-case" guarantee. If an algorithm is $O(n^2)$, it means the running time will grow **no slower** (or wont take more time) than a quadratic function. It provides an asymptotic upper bound.
 
 - **Formal Definition:** $f(n) = O(g(n))$ if there exist positive constants $c$ and $n_0$ such that $0 \le f(n) \le cg(n)$ for all $n \ge n_0$.
 
@@ -205,7 +205,7 @@ Sometimes, an algorithm's worst case is rare but disastrous. **Randomized Algori
 
 ---
 
-# How to Measure Time Complexity (Quick Rules to get estimates)
+## How to Measure Time Complexity (Quick Rules to get estimates)
 
 ### Rule 1: Drop Constants
 ```cpp
@@ -543,7 +543,7 @@ Where:
 
 Let **$c = log_b(a)$** (critical exponent)
 
-#### Case 1: $f(n) = O(n^d)$ where d < c, i.e., $f(n) = O(n^{log_ba})$
+#### Case 1: $f(n) = O(n^d)$ where d < c
 **Result**: $$T(n) = Θ(n^c) = Θ(n^{(log_ba)})$$
 
 *Recursion dominates*
