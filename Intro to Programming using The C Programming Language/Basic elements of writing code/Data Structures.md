@@ -8,7 +8,7 @@ A **data structure** is a way of **organizing, storing, and managing data** effi
 
 Types of data structure:
     - **[[Arrays]]**: Ordered collections of elements of the same data type.
-    - **[Lists](Linked%20Lists):** Ordered collections of elements (can be of different data types in some languages).
+    - **[Lists](Linked%20Lists.md):** Ordered collections of elements (can be of different data types in some languages).
     - **Dictionaries (or Hash Maps):** Collections of key-value pairs.
     - **Sets:** Unordered collections of unique elements.
 

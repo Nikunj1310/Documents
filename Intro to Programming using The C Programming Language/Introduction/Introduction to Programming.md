@@ -149,7 +149,7 @@ The basic elements of programming are the fundamental building blocks you use to
 Now, when we want to automate a task via a programming language, we first think of **`logic`** behind it, that how it can be solved and all. *Logic behind any problem is the reasoning or the thought process behind solving it.*
 Next we write down a step-by-step guide to how to solve that problem or perform that task, an abstract language independent description of how to achieve a result. This is what we call an **`Algorithm`**.
 And then, we finally **`code`** it in a particular programming language of our choice.
-However, everything in the world needs time, so we look at the [time complexity](Time%20Complexity) of the code you write in a programming language, and *using that concept, we come up with the best algorithm* for a given problem, as the logic would always remain the same, what would change is how it is implemented, i.e., the algorithm.
+However, everything in the world needs time, so we look at the [time complexity](Time%20Complexity.md) of the code you write in a programming language, and *using that concept, we come up with the best algorithm* for a given problem, as the logic would always remain the same, what would change is how it is implemented, i.e., the algorithm.
 
 ---
 # Techniques of programming

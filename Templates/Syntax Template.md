@@ -7,7 +7,7 @@ Hence, the basic elements of the programming language that we will see are simil
 
 Since all are built like The C Programming language, the Syntax of all is also quite similar, sometimes it might vary, and in rare case it is completely different.
 
-So lets have a look at what is different in this programming language when it comes to [syntax](Syntax).
+So lets have a look at what is different in this programming language when it comes to [syntax](Syntax.md).
 
 ---
 # 1. Structure of programme
