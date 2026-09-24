@@ -140,7 +140,7 @@ In C, an **assignment operator (`=`)** can be used inside conditionals. However,
 
 ---
 ### **What Does an Assignment Expression Return?**
-An assignment expression like `x = 5` **returns the assigned value**,[but why?](Operators)(i.e., `5` in this case).  
+An assignment expression like `x = 5` **returns the assigned value**,[but why?](Operators.md)(i.e., `5` in this case).  
 This means you can use assignment in conditionals, but it can be confusing!
 
 ### **Example 1: Assignment in an `if` Statement**
