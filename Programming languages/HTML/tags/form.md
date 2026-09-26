@@ -34,5 +34,5 @@ Along with that we can also provide `dropdown menu` and `checkboxes` with a comp
 ### Creating an input field
 Input field is where user gives info,i.e., fills information.
 Let's have a look at basic elements used to create an input field in a form:
-	- [[<label>]]
-	- [[<input>]]
+	- [[label]]
+	- [[input]]

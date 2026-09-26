@@ -101,7 +101,7 @@ This is Manipulation the data that is there in the tables in the active database
 
 - ## Data Query Language (DQL) Commands:
 
-### [[SELECT]]
+### [[Backend/Database and Structures/MySQL/SELECT]]
 
 ### [[ORDER BY clause in SELECT]]
 

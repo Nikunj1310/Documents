@@ -1,5 +1,5 @@
 # What is the use?
-The `<label>` tag in HTML is used to define a caption or description for form elements, such as [[<input>]], [[<textarea>]], [[<select>]], and others. Its primary purpose is to improve accessibility and usability by clearly associating text with a specific form control.
+The `<label>` tag in HTML is used to define a caption or description for form elements, such as [[input]], [[textarea]], [[Programming languages/HTML/tags/select]], and others. Its primary purpose is to improve accessibility and usability by clearly associating text with a specific form control.
 
 It has an attribute called `for` which connects it to the input field it is describing. **Form Control** is what the label element is describing.
 

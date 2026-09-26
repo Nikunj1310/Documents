@@ -101,7 +101,7 @@ Also we might need to add description in the code about what  does what so that 
 Keeping all these things in mind, we have the following elements of programming:
 
 - First let's look at the basic elements that work together to form the logic and behavior of a program.
-- At the start of programme we define a [[Header]], which gives information about which [[library]] to use in order to look for the meaning of the words used in the programme.
+- At the start of programme we define a [[Intro to Programming using The C Programming Language/Basic elements of writing code/Header]], which gives information about which [[library]] to use in order to look for the meaning of the words used in the programme.
 - Also, everything that we name in the programme follows a rule of naming and is called an [[Identifier]].
 - While writing the programme, we have to follow a certain rules of that programming language called the [[Syntax]] of that programming language. 
 Now after covering this, it would be a good time to check out [[Implementation]], and as we are using The C Programming Language, check out [[The C Implementation]].

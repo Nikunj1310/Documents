@@ -164,7 +164,7 @@ We can add images using `<img>` tag in html.
 ## Sematic Elements in HTML
 **Semantic elements** in HTML are tags that clearly describe their meaning and the type of content they contain, both to the browser and to developers.
 
-Unlike non-semantic elements like [[<div>]] and [[<span>]], which provide no information about their content, semantic elements make the structure and purpose of a web page more obvious.
+Unlike non-semantic elements like [[div]] and [[span]], which provide no information about their content, semantic elements make the structure and purpose of a web page more obvious.
 
 The code written in Practice.html covers this.
 
@@ -172,10 +172,10 @@ Below are some of the most widely used semantic elements in HTML5, along with th
 
 | Element          | Purpose/Description                                                               |
 | ---------------- | --------------------------------------------------------------------------------- |
-| [[<header>]]     |  Defines introductory content or navigation links at the top of a page or section |
-| [[<nav>]]        | Contains navigation links (main menus, tables of contents, etc.)                  |
+| [[Programming languages/HTML/header]]     |  Defines introductory content or navigation links at the top of a page or section |
+| [[nav]]        | Contains navigation links (main menus, tables of contents, etc.)                  |
 | `<main>`         | Specifies the main content unique to the page                                     |
-| [[<section>]]    | Represents a thematic grouping of content, typically with a heading               |
+| [[section]]    | Represents a thematic grouping of content, typically with a heading               |
 | `<article>`      | Defines independent, self-contained content (e.g., blog post, news article)       |
 | `<aside>`        | Contains content tangentially related to the main content (e.g., sidebars)        |
 | `<footer>`       | Defines a footer for a page or section (e.g., copyright, contact info)            |
@@ -185,7 +185,7 @@ Below are some of the most widely used semantic elements in HTML5, along with th
 | `<summary>`      | Provides a summary or heading for a `<details>` element                           |
 | `<mark>`         | Highlights or marks text for reference                                            |
 | `<time>`         | Represents a specific period in time                                              |
-| [[<blockquote>]] | Used to represent quotes in HTML                                                  |
+| [[blockquote]] | Used to represent quotes in HTML                                                  |
 
 ---
 ## Creating Tables
@@ -344,13 +344,13 @@ To create a complete HTML form, you use the `<form>` element as the container an
 
 | Element                | Purpose                                                                                                                                                                                                                                                                                                                     |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [[<form>]]             | The main container for all form elements. Attributes:<br>- `action`: URL where form data will be sent after submission.<br>- `method`: HTTP method (`get` or `post`) used to send data.                                                                                                                                     |
-| [[<h2>]]               | A heading for the form, improves structure and accessibility.                                                                                                                                                                                                                                                               |
-| [[<label>]]            | Describes each input field, improves accessibility. The `for` attribute links it to the corresponding input by `id`.                                                                                                                                                                                                        |
-| [[<input>]]            | Creates various types of user input fields. <br>Common types include:<br>- `text`: Single-line text input.<br>- `email`: Validates input as an email address.<br>- `password`: Hides the input text.<br>- `checkbox`: Allows selection of an option (e.g., agreeing to terms).<br>- `submit`: Button to send the form data. |
-| [[<select>]]           | Creates a dropdown menu. Contains `<option>` elements for each choice.                                                                                                                                                                                                                                                      |
-| [[<option>]]           | Represents each item in a dropdown menu.                                                                                                                                                                                                                                                                                    |
-| [[<br>]]               | Line break for better visual separation (optional for layout).                                                                                                                                                                                                                                                              |
+| [[form]]             | The main container for all form elements. Attributes:<br>- `action`: URL where form data will be sent after submission.<br>- `method`: HTTP method (`get` or `post`) used to send data.                                                                                                                                     |
+| [[h2]]               | A heading for the form, improves structure and accessibility.                                                                                                                                                                                                                                                               |
+| [[label]]            | Describes each input field, improves accessibility. The `for` attribute links it to the corresponding input by `id`.                                                                                                                                                                                                        |
+| [[input]]            | Creates various types of user input fields. <br>Common types include:<br>- `text`: Single-line text input.<br>- `email`: Validates input as an email address.<br>- `password`: Hides the input text.<br>- `checkbox`: Allows selection of an option (e.g., agreeing to terms).<br>- `submit`: Button to send the form data. |
+| [[Programming languages/HTML/tags/select]]           | Creates a dropdown menu. Contains `<option>` elements for each choice.                                                                                                                                                                                                                                                      |
+| [[option]]           | Represents each item in a dropdown menu.                                                                                                                                                                                                                                                                                    |
+| [[br]]               | Line break for better visual separation (optional for layout).                                                                                                                                                                                                                                                              |
 | [[required attribute]] | Makes the field mandatory; form cannot be submitted if not filled.                                                                                                                                                                                                                                                          |
 
 ---
@@ -516,8 +516,8 @@ The HTML for it looks like this:
 
 ## Project 2
 ### For Navigation bar:
-It is enclosed under a [[<header>]] called `nav-container`.
-[[<nav>]] element is used for the overall navigation bar
+It is enclosed under a [[Programming languages/HTML/header]] called `nav-container`.
+[[nav]] element is used for the overall navigation bar
 - A space is given for the Netflix logo first
 - Two division are created:
 	- `leftcol`

@@ -1,3 +1,4 @@
+
 # What is the use?
 The `<nav>` tag is a semantic HTML5 element specifically designed to define a section of a webpage that contains navigation links. It helps organize menus and navigation areas, making web content more accessible and meaningful for both users and search engines.
 
