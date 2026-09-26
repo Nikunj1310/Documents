@@ -40,7 +40,7 @@ Each HTML element has attributes that can be used with it for custom edits and d
 ## Basics of HTML code:
 So for example, in the practice file 1, we have used various elements:
 ![[Pasted image 20250512230126.png]]
-We have used a variety of elements and their functions would be [explained here](Basic%20HTML%20Elements%20used%20in%20"Practice1.html".md).
+We have used a variety of elements and their functions would be [](Basic%20HTML%20Elements%20used%20in%20Practice1.md).
 
 ---
 ## Head Elements 
