@@ -218,7 +218,7 @@ It can only do math if at least one of the pieces of the puzzle is _already insi
 
 
 
-## [[The "Copy-Paste" Command, MOV in Assembly]]
+## [[The Copy-Paste Command MOV in Assembly]]
 
 The `MOV` instruction is how you move data around.
 **Think of it as:** `Destination = Source`
@@ -2040,7 +2040,7 @@ Coiver :
 - `DD` (Define Doubleword): Allocates 4 bytes.
 - `EQU`: Defines a constant value (similar to `#define` in C).
 
-#### **[[Segment & Section Control]]** Used to organize the program's memory structure.
+#### **[[Segment and Section Control]]** Used to organize the program's memory structure.
 
 - `.DATA`: Marks the start of the initialized data segment.
 - `.CODE`: Marks the start of the executable code segment.

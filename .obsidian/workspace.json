@@ -41,40 +41,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming languages/cpp/C++ Programming Language.md",
+                "file": "Computer Architecture/assembly/Data types in Assembly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "C++ Programming Language"
-            }
-          },
-          {
-            "id": "c66b7eab6f860693",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "cb7aa5d285a43df7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Programming languages/HTML/tags/option.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "option"
+              "title": "Data types in Assembly"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -171,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming languages/HTML/tags/option.md",
+                "file": "Computer Architecture/assembly/Data types in Assembly.md",
                 "followCursor": false,
                 "showSearch": true,
                 "searchQuery": "npm"
@@ -234,10 +210,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cb7aa5d285a43df7",
+  "active": "6d59789785efe94d",
   "lastOpenFiles": [
-    "Programming languages/HTML/tags/textarea.md",
+    "Computer Architecture/assembly/Data Definition in MASM.md",
+    "Computer Architecture/assembly/END Directive in MASM.md",
+    "Computer Architecture/assembly/Introduction to assembly.md",
+    "Computer Architecture/assembly/Operator Directives in MASM.md",
+    "Computer Architecture/assembly/PlateMate Features List.md",
+    "Computer Architecture/assembly/Procedural And Termination Directives in MASM.md",
+    "Computer Architecture/assembly/Registers in x86.md",
+    "Computer Architecture/assembly/Segment and Section Control.md",
+    "Computer Architecture/assembly/The CF And SF Confusion.md",
+    "Computer Architecture/assembly/The Copy-Paste Command MOV in Assembly.md",
+    "Computer Architecture/assembly/What is MS-DOS.md",
+    "Programming languages/cpp/C++ Programming Language.md",
+    "GameDev/Notes/00 - Index.md",
     "Programming languages/HTML/tags/option.md",
+    "Programming languages/HTML/tags/textarea.md",
     "Programming languages/HTML/tags/select.md",
     "Programming languages/HTML/tags/br.md",
     "Programming languages/HTML/tags/blockquote.md",
@@ -249,19 +238,6 @@
     "Programming languages/HTML/tags/span.md",
     "Backend/Database and Structures/h2.md",
     "Programming languages/HTML/tags/div.md",
-    "Programming languages/HTML/tags/nav.md",
-    "Backend/Database and Structures/Ok, but can it be said that Category is just like a total participation overlapping Generalization.md",
-    "Backend/Database and Structures/So, is Generalization always have to be total participation and can never be partial participation.md",
-    "Backend/But what if multiple page project is there.md",
-    "Programming languages/JavaScript/How is the code written and executed in JS.md",
-    "Command-line Interface/What is a Command-Line Interface.md",
-    "Unity GameDev/Unity/Canvas/But why Quaternion angles, What are they, What are Eular, and why wont Eular alone work.md",
-    "Programming languages/JavaScript/How does == compare in JS.md",
-    "Computer Architecture/assembly/What is MS-DOS.md",
-    "Programming languages/JavaScript/What is Vue.js.md",
-    "Intro to Programming using The C Programming Language/Data Structures and Algorithms/Algorithms Revision Sheet.md",
-    "Programming languages/cpp/C++ Programming Language.md",
-    "Programming languages/JavaScript/Introduction to JavaScript.md",
     "Backend/Docker.md.tmp.1846072.004539a33cc6",
     "Backend/Docker Best Practices.md.tmp.1846072.025c98556c94",
     "Backend/Docker Compose for Multi-Service Apps.md.tmp.1846072.d3ddd69fc41f",
