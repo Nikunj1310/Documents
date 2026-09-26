@@ -318,7 +318,7 @@ In JavaScript, the concept of **Interfaces** is a bit of a "good news/bad news" 
 
 The "bad news" is that **JavaScript (Vanilla JS) does not have a formal `interface` keyword.** Unlike Java or C#, JavaScript is a dynamically typed language, so it doesn't natively enforce structure at compile time.
 
-The "good news" is that we achieve the same goal using **TypeScript** or **Object Composition**.
+The "good news" is that we achieve the same goal using **TypeScript** or **Object Composition**. [[Introduction to TypeScript]]
 
 ---
 
@@ -421,3 +421,5 @@ class Circle extends ShapeInterface {
     
 - **Purpose:** To ensure different parts of your code can communicate reliably by agreeing on a specific data structure.
     
+
+so in interfaces, the vbariables are like `key:value` or what? how do we decalre methods and all? Hopw does it actually work and all?

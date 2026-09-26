@@ -66,7 +66,7 @@ x <= 7;    // true (less than or equal)
 ```
 
 So here, we find some new things like == and === , === means is equal to in both value and type, while == doesn't actually care about the type.
-So [[How does == compare in JS?]] 
+So [[How does == compare in JS]] 
 
 ### 4. Logical Operators
 Combine or invert boolean values.

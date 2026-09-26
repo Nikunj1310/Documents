@@ -142,7 +142,7 @@ gameObject.SetActive(true);
 
 ## Rotation
 
-- Stored internally as a **Quaternion**. ([[But why Quaternion angles? What are they? What are Eular? and why wont Eular alone work?]]) `eulerAngles` is a converted degree _view_, recomputed on every read/write.
+- Stored internally as a **Quaternion**. ([[But why Quaternion angles, What are they, What are Eular, and why wont Eular alone work]]) `eulerAngles` is a converted degree _view_, recomputed on every read/write.
 - Repeatedly setting individual `eulerAngles` axes per-frame → drift risk. Use `Quaternion.Euler()` / `Slerp()` for continuous rotation instead.
 
 ## Directional shortcuts (world-space unit vectors)

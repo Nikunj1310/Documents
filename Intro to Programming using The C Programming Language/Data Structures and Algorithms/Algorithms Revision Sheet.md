@@ -8,17 +8,17 @@
 
 # Kadane's Algorithm
 
-**Problem:** Given an array (with possibly negative numbers), find the contiguous subarray with the largest sum.
+**Problem:** Given an array (with possibly negative numbers), find the **contiguous subarray** with the largest sum.
 
 ## Core Idea
 
-At each index, decide: _extend the previous subarray_ or _start fresh from here_. If the running sum becomes negative, it can only drag down future sums — so drop it and restart.
+At each index, decide: _extend the previous subarray_ or _start fresh from here_. If the running sum becomes negative, it can only drag down future sums, so drop it and restart.
 
 ## Recurrence
 
 ```
 maxEndingHere = max(arr[i], maxEndingHere + arr[i])
-maxSoFar      = max(maxSoFar, maxEndingHere)
+maxSoFar = max(maxSoFar, maxEndingHere)
 ```
 
 - `maxEndingHere` → best sum of subarray **ending at index i**
@@ -77,6 +77,7 @@ int kadane(vector<int>& arr) {
 That's the whole algorithm — one pass, one simple choice at each step: extend or restart.
 
 # Dutch National Flag Algorithm:
+
  The **Dutch National Flag Algorithm**, proposed by Edsger W. Dijkstra, is the optimal way to sort an array consisting of only three distinct elements (typically represented as `0`, `1`, and `2`).
 
 Instead of using a standard sorting algorithm that takes $O(N \log N)$ time, or counting the elements which requires two passes, this algorithm sorts the array in a **single pass** with $O(N)$ time complexity and $O(1)$ auxiliary space.
@@ -155,13 +156,11 @@ int main() {
 ### Complexity Breakdown
 
 - **Time Complexity:** $O(N)$. The algorithm traverses the array exactly once. Each step either increments `mid` or decrements `high`, shrinking the search space by one.
-    
 - **Space Complexity:** $O(1)$. It modifies the array completely in place without requiring any additional data structures.
-
 
 # Moore's Voting Algorithm:
 
-**Problem:** Given an array, find the element that appears **more than n/2 times** (the majority element). Assumes a majority element exists (unless stated otherwise — then verify).
+**Problem:** Given an array, find the element that appears **more than n/2 times** (the majority element). Assumes a majority element exists (unless stated otherwise , then verify).
 
 ## Core Idea
 
@@ -476,3 +475,8 @@ bool hasCycle(ListNode* head) {
 - Sliding window problems (fixed or variable size) are a same-direction two-pointer variant.
 - Fast-slow pointers solve cycle detection / middle-of-list problems in O(n) time, O(1) space.
 - Don't confuse with **Binary Search** — two pointer is linear scan, not divide-and-conquer.
+
+
+# Binary Algorithm Approches
+
+# Search in Rotated Array:

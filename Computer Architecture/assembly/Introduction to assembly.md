@@ -2269,7 +2269,7 @@ In x86 Assembly, you don't have libraries. You have **Interrupt 21h**.
 
 Imagine you are a handy worker (the **User Program**). You want to build a house, but you are not allowed to touch the water pipes or the electric grid directly (the **Hardware**).
 
-Instead, you have a walkie-talkie connected to the **Site Manager** (the **Operating System / MS-DOS**, [[What is MS-DOS?]]*).
+Instead, you have a walkie-talkie connected to the **Site Manager** (the **Operating System / MS-DOS**, [[What is MS-DOS]]*).
 
 - **The Channel:** The walkie-talkie channel is always **`INT 21H`**.
     

@@ -103,11 +103,10 @@ Here is a breakdown of why this specific extension exists and how it differs fro
 
 ## What is JSX?
 
-JSX (JavaScript XML) is a **syntax extension for JavaScript** created by React. It's **not standard JavaScript**—it's React-specific and lets you write HTML-like code inside JavaScript files.[^1][^2][^5]
-
+JSX (JavaScript XML) is a **syntax extension for JavaScript** created by React. It's **not standard JavaScript**—it's React-specific and lets you write HTML-like code inside JavaScript files.
 ## How it works:
 
-JSX code gets **transpiled (converted) to regular JavaScript** by tools like Babel before running in the browser. Browsers can't understand JSX directly.[^2][^3]
+JSX code gets **transpiled (converted) to regular JavaScript** by tools like Babel before running in the browser. Browsers can't understand JSX directly.
 
 **You write:**
 
@@ -121,7 +120,7 @@ const element = <h1>Hello, world!</h1>;
 const element = React.createElement('h1', null, 'Hello, world!');
 ```
 
-Every JSX tag becomes a `React.createElement()` function call.[^5][^2]
+Every JSX tag becomes a `React.createElement()` function call.
 
 ## JSX Syntax Basics
 
@@ -130,7 +129,6 @@ Every JSX tag becomes a `React.createElement()` function call.[^5][^2]
 ```jsx
 const greeting = <Text>Hello!</Text>;
 ```
-
 
 ### JavaScript expressions with `{}`:
 

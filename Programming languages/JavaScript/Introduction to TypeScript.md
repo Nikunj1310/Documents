@@ -1,4 +1,6 @@
-
+get to know:
+Record<string, unknown>; aka record datastructure
+in objects, what if I use : instead of , and all
 ## What is TypeScript?
 
 TypeScript is a **strongly typed, object-oriented programming language** developed and maintained by Microsoft. It's a **superset of JavaScript**, meaning all valid JavaScript code is also valid TypeScript code. TypeScript adds optional static typing, classes, interfaces, and other features to JavaScript, then compiles down to plain JavaScript that runs anywhere JavaScript runs.

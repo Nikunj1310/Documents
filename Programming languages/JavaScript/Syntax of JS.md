@@ -4,7 +4,7 @@
 
 JavaScript uses C-like syntax for variables, loops, and conditionals, so constructs like `if`, `else`, `while`, `for`, and `switch` will look familiar.
 
-[[How is the code written and executed in JS?]]
+[[How is the code written and executed in JS]]
 
 ## Variables:
 Variables can be declared using `var`, `let`, or `const`. Example:

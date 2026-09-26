@@ -2482,7 +2482,7 @@ INSERT INTO EMPLOYEE VALUES ('111-22-3333', 'Mike Johnson', 40000);
 ![[Pasted image 20260313010515.png]]
 ![[Pasted image 20260313011426.png]]
 
-### [[So, is Generalization always have to be total participation and can never be partial participation?]]
+### [[So, is Generalization always have to be total participation and can never be partial participation]]
 
 ### 5.3 Membership Constraint (Defining Predicates)
 
@@ -3226,7 +3226,7 @@ INSERT INTO REGISTERED_USER (username, email, customer_id, vendor_id)
 VALUES ('janesmith', 'jane@email.com', 2, 2);
 ```
 
-### [[Ok, but can it be said that Category is just like a total participation overlapping Generalization?]]
+### [[Ok, but can it be said that Category is just like a total participation overlapping Generalization]]
 
 ---
 

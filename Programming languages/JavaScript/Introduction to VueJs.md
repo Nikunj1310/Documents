@@ -1,7 +1,7 @@
 ***Vue.js is an open-source JavaScript framework designed for building user interfaces (UIs) and [[Single-Page Applications (SPAs)]].***
 ***[Official documentation to learn from basic](https://vuejs.org/guide/quick-start.html)***
 
-![[What is Vue.js?]]
+![[What is Vue.js]]
 
 Vue is more like a structured JavaScript.
 
