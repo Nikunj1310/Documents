@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programming languages/HTML/Notes/Basic HTML Elements used in Practice1.md",
+                "file": "git/Git Guide for Beginners.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basic HTML Elements used in Practice1"
+              "title": "Git Guide for Beginners"
             }
           }
         ],
@@ -147,10 +147,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Programming languages/HTML/Notes/Basic HTML Elements used in Practice1.md",
+                "file": "git/Git Guide for Beginners.md",
                 "followCursor": false,
                 "showSearch": true,
-                "searchQuery": "npm"
+                "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Outline"
@@ -212,6 +212,11 @@
   },
   "active": "6d59789785efe94d",
   "lastOpenFiles": [
+    "git/Untitled.md",
+    "git/Git Guide for Beginners.md",
+    "Untitled.md",
+    "git",
+    "Programming languages/HTML/Notes/Basic HTML Elements used in Practice1.md",
     "Programming languages/HTML/Practice files/Practice4.html",
     "Programming languages/HTML/Practice files/Practice3.html",
     "Programming languages/HTML/Practice files/Practice2.html",
@@ -239,17 +244,12 @@
     "Programming languages/HTML/tags/option.md",
     "Programming languages/HTML/tags/textarea.md",
     "Programming languages/HTML/tags/select.md",
-    "Programming languages/HTML/tags/br.md",
-    "Programming languages/HTML/tags/blockquote.md",
-    "Programming languages/HTML/tags/section.md",
     "Backend/Docker.md.tmp.1846072.004539a33cc6",
     "Backend/Docker Best Practices.md.tmp.1846072.025c98556c94",
     "Backend/Docker Compose for Multi-Service Apps.md.tmp.1846072.d3ddd69fc41f",
     "Backend/Writing Your First Dockerfile.md.tmp.1846072.03f33db88174",
-    "Backend/Introduction to Docker.md.tmp.1846072.44acc02981d5",
     "Attachments/0_-q0HWPWz_lkrXe6p.webp",
     "Attachments/Pasted image 20260820023217.png",
-    "Attachments/Recording 20260809201306.m4a",
     "Attachments/Pasted image 20260808000452.png",
     "Attachments/Pasted image 20260808000244.png",
     "Attachments/db_migration_lifecycle.svg",
